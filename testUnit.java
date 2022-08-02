@@ -1,4 +1,7 @@
-public class CalculatorTestextends TestCase
+import calc.Calculator;
+import junit.framework.TestCase; 
+
+public class calculatorTest extends TestCase
 { 
     private static Calculator calculator= new Calculator();
 
@@ -25,8 +28,8 @@ public class CalculatorTestextends TestCase
 
     public void testMul()
     { 
-        calculator.add(7);
-        calculator.add(8);
+        calculator.mul(7);
+        calculator.mul(8);
         assertEquals(calculator.getResult(), 56); 
     }
 
@@ -35,8 +38,8 @@ public class CalculatorTestextends TestCase
 
         public void testSub()
         { 
-            calculator.add(100);
-            calculator.add(25);
+            calculator.sub(100);
+            calculator.sub(25);
             assertEquals(calculator.getResult(), 75); 
         }
 }

@@ -1,45 +1,35 @@
-import calc.Calculator;
+import user.Personne;
 import junit.framework.TestCase; 
 
-public class calculatorTest extends TestCase
+public class userTest extends TestCase
 { 
-    private static Calculator calculator= new Calculator();
+    private static Personne user = new Personne();
 
-#test Ajout de 2 nombres 
+#test Email
 
-    public void testAdd()
+    public void testEmail()
     { 
-        calculator.add(1);
-        calculator.add(1);
-        assertEquals(calculator.getResult(), 2); 
+         email = "username@domain.com";
+         assertTrue(EmailValidator.getEmail()
+            .isValid(email));
     }
 
-#test Division de 2 nombres 
+#test Nom 
 
-    public void testDiv()
-    { 
-        calculator.div(4);
-        calculator.div(2);
-        assertEquals(calculator.getResult(), 2); 
-    }
+  public void testGetNom() {
+    assertEquals("Le nom est incorrect", "nom", personne.getNom());
+  }
 
-#test Multiplication de 2 nombres 
+#test Prenom 
 
+public void testGetPrenom() {
+    assertEquals("Le prenom est incorrect", "prenom", personne.getPrenom());
+  }
 
-    public void testMul()
-    { 
-        calculator.mul(7);
-        calculator.mul(8);
-        assertEquals(calculator.getResult(), 56); 
-    }
-
-#test Substraction de 2 nombres 
+#test Age
 
 
-        public void testSub()
-        { 
-            calculator.sub(100);
-            calculator.sub(25);
-            assertEquals(calculator.getResult(), 75); 
+        public void testIfAgeIsGreaterThan(){
+            assertTrue(personne.getAge()>30);
         }
 }
